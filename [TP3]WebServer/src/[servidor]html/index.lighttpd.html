@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[SO_II] TP3 WebServer</title>
+<style type="text/css" media="screen">
+body { background: #e7e7e7; font-family: Verdana, sans-serif; font-size: 11pt; }
+#page { background: #ffffff; margin: 50px; border: 2px solid #c0c0c0; padding: 10px; }
+#header { background: #4b6983; border: 2px solid #7590ae; text-align: center; padding: 10px; color: #ffffff; }
+#header h1 { color: #ffffff; }
+#body { padding: 10px; }
+span.tt { font-family: monospace; }
+span.bold { font-weight: bold; }
+a:link { text-decoration: none; font-weight: bold; color: #C00; background: #ffc; }
+a:visited { text-decoration: none; font-weight: bold; color: #999; background: #ffc; }
+a:active { text-decoration: none; font-weight: bold; color: #F00; background: #FC0; }
+a:hover { text-decoration: none; color: #C00; background: #FC0; }
+</style>
+</head>
+<body>
+<div id="page">
+ <div id="header">
+ <h1> Gestion de Base de Datos de AWS </h1>
+ <h3> Esteban Tissot - Catedra de Sistemas Operativos II - Departamento de Computación - FCEFyN - UNC </h3>
+ </div>
+ <div id="body">
+<ul>   
+  
+  <CENTER><p>
+  <h2>AWS</h2>
+  <iframe
+    src ="/cgi-bin/info_estaciones.cgi"
+    width="80%"
+    height="460"> 
+    </iframe>
+  <p></CENTER>
+
+  <p>
+  <form method="GET" action="http://192.168.0.103/cgi-bin/info_estacion.cgi">
+  <li>
+  Elija una estacion para mas información:  
+  <select name=estacion>
+    <option value="30135">Yacanto Norte</option>"
+    <option value="30057">MagyaCba 60 cuadras</option>"
+    <option value="30061">MagyaCba La Cumbrecita</option> 
+    <option value="30099">Cerro Obero - Capilla del Monte</option>
+    <option value="30069">MagyaCba Oliva</option>    
+    </select>
+    <input type="submit" value="OK">
+  </li>     
+  </form>
+  </p>
+
+  <p>
+  <form method="GET" action="http://192.168.0.103/cgi-bin/promedio.cgi">
+  <li>
+  Calcular promedio de:  
+  <select name=variable>
+    <option value="5">Temperatura</option>"
+    <option value="6">Humedad</option>"
+    <option value="7">Punto de Rocío</option> 
+    <option value="8">Precipitación</option>
+    <option value="9">Velocidad Viento</option>
+    <option value="10">Dirección Viento</option>  
+    <option value="11">Rafaga Maxima</option>  
+    <option value="12">Presión</option>  
+    <option value="13">Radiación Solar</option>  
+    <option value="14">Temperatura Suelo 1</option> 
+    <option value="15">Temperatura Suelo 2</option>      
+    <option value="16">Temperatura Suelo 3</option>      
+    <option value="17">Humedad Suelo 1</option>
+    <option value="18">Humedad Suelo 2</option> 
+    <option value="19">Humedad Suelo 3</option> 
+    <option value="20">Humedad de Hoja</option>            
+    </select>
+    <input type="submit" value="OK">
+
+  </li>     
+  </form>
+  </p>
+
+  <p><h3>
+  <a href="files/datos_meteorologicos.CSV" download="datos_meteorologicos.txt">Descargar Base de Datos</a>
+  </h3></p> 
+
+  <CENTER><p>
+  <button Onclick=sysinfo()> Informacion del Sistema </button></li> 
+  </p></CENTER>       
+  
+  <h2>About this page</h2>
+  <p>
+   This is a placeholder page installed by the Debian release of the <a href="http://packages.debian.org/lighttpd">Lighttpd server package.</a>
+  </p>
+ </div>
+</div>
+<!-- s:853e9a42efca88ae0dd1a83aeb215047 -->
+</body>
+
+<!--  FUNCIONES  -->
+
+
+<script>
+function sysinfo(){
+  window.open("sysinfo.html")
+}
+</script>
+
+</html>
+
+
